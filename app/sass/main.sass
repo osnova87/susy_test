@@ -1,0 +1,308 @@
+//import style failes
+
+@import "reset"
+@import "pattern"
+@import "header"
+
+//@import "sprite"
+//@include sprite($icon-name) - connect sprite
+
+
+/* navigation */
+
+.b-navigation
+  +container()
+  @media (max-width: 590px)
+    display: flex
+    flex-direction: column-reverse
+
+.b-left-navigation
+  +span(3 of 12)
+  margin-top: 40px
+  @media (max-width: 590px)
+    +span(12 of 12)
+
+.b-left-navigation__title
+  +font(13px, 19px, #888)
+  display: block
+  padding-left: 40px
+  margin-top: 20px
+  font-weight: bold
+  @media (max-width: 590px)
+    padding-left: 16px
+
+.b-left-navigation__list
+  +font(13px, 19px, #888)
+  list-style: outside
+  padding: 15px 30px 20px 40px
+  background-color: #f3f3f3
+  border: 1px #ddd solid
+  border-radius: 4px
+  @media (max-width: 767px)
+    padding:
+      left: 16px
+      right: 3px
+
+
+.b-right-navigation
+  +span(9 at 4 of 12 nest)
+  border-left: 1px solid #dddddd
+  box-sizing: border-box
+  margin-top: 40px
+  @media (max-width: 590px)
+    +span(12 of 12)
+    border: none
+
+.right-navigation__left
+  +span(4 of 9)
+  text-align: center
+  @media (max-width: 450px)
+    +span(12 of 12)
+
+  p
+    +font(13px, auto, #0066c0)
+    margin-top: 30px
+
+.right-navigation__right
+  +span(5 at 5 of 9)
+  @media (max-width: 450px)
+    +span(12 of 12)
+    padding-top: 30px
+
+.right-navigation__right_prod
+  +font(17px, 1.255, #111)
+  font-weight: bold
+  margin-bottom: 6px
+
+.right-navigation__right_title
+  +font(17px, 1.255, #888)
+  font-weight: normal
+  margin-bottom: 6px
+
+.right-navigation__right_description,
+.right-navigation__right_fin
+  +font(13px, 19px, #111)
+  margin-bottom: 14px
+
+.right-navigation__right_list
+  +font(13px, 19px, #888)
+  list-style: outside
+  padding: 20px 30px 20px 40px
+  margin-top: 10px
+  background-color: #f3f3f3
+  border: 1px #ddd solid
+  border-radius: 4px
+
+.hr
+  +span(12 of 12)
+  margin:
+    top: 30px
+    bottom: 15px
+  background-color: #dddddd
+  height: 2px
+
+.hr-none
+  @media (max-width: 767px)
+    display: none
+
+/* content */
+
+.b-content
+  +container()
+
+.b-left-content
+  +span(3 of 12)
+  margin-top: 40px
+  @media (max-width: 590px)
+    +span(12 of 12)
+
+.left-content-text
+  +span(3 of 3 nest)
+  padding-top: 40px
+  @media (max-width: 590px)
+    +span(12 of 12)
+    padding-top: 0
+
+.left-content__title
+  +font(13px, 19px, #888)
+  display: block
+  padding-left: 40px
+  margin-top: 20px
+  font-weight: bold
+  @media (max-width: 590px)
+    padding-left: 16px
+
+.left-content__list
+  +font(13px, 19px, #888)
+  list-style: outside
+  padding: 15px 30px 20px 40px
+  background-color: #f3f3f3
+  border: 1px #ddd solid
+  border-radius: 4px
+  @media (max-width: 767px)
+    padding:
+      left: 16px
+      right: 3px
+
+.left-content-table
+  +span(3 of 3 nest)
+  text-align: center
+  margin-top: 20px
+  @media (max-width: 767px)
+    display: none
+  tr
+    td
+      +font(11px, 1.5, #888)
+      border-radius: 1px
+      padding:
+        top: 10px
+        bottom: 10px
+      &:first-child
+        background-color: #f3f3f3
+        border-right: 1px solid #dddddd
+        border-bottom: 1px solid #dddddd
+        padding:
+          left: 10px
+          right: 10px
+      &:nth-child(2)
+        border-bottom: 1px solid #dddddd
+        padding:
+          left: 10px
+          right: 10px
+
+.b-right-content
+  +span(9 at 4 of 12 nest)
+  padding-top: 40px
+  border-left: 1px solid #dddddd
+  box-sizing: border-box
+  @media (max-width: 590px)
+    +span(12 of 12)
+    border: none
+  @media (max-width: 767px)
+    +with-layout(10)
+      .right-content-one,
+      .right-content-two,
+      .right-content-three,
+      .right-content-four,
+      .right-content-five,
+      .right-content-six
+        @media (max-width: 767px)
+          +span(5 of 10 nest)
+          margin-top: 10px
+        @media (max-width: 450px)
+          +span(10 of 10)
+          margin-top: 30px
+
+.right-content-one
+  +span(3 of 9 nest)
+  img
+    +span(3 of 3)
+
+.right-content-two
+  +span(3 of 9 nest)
+  img
+    +span(3 of 3)
+
+.right-content-three
+  +span(3 at 7 of 9 nest)
+  img
+    +span(3 of 3)
+
+.right-content-four
+  +span(3 of 9 nest)
+  margin-top: 30px
+  img
+    +span(3 of 3)
+
+.right-content-five
+  +span(3 of 9 nest)
+  margin-top: 30px
+  img
+    +span(3 of 3)
+
+.right-content-six
+  +span(3 at 7 of 9 nest)
+  margin-top: 30px
+  img
+    +span(3 of 3)
+
+.g-view
+  +font(13px, 19px, #0066c0)
+  +span(3 of 3)
+  margin-top: 25px
+  text-align: center
+
+.g-title
+  +font(17px, 1.255, #111)
+  +span(3 of 3)
+  font-weight: normal
+  margin:
+    top: 15px
+    bottom: 15px
+  text-align: center
+
+.g-table
+  text-align: center
+  +span(3 of 3)
+  td
+    +font(12px, 1.5, #111)
+    border: 1px solid #dddddd
+    border-radius: 1px
+    background: rgb(238,238,238)
+    background: -moz-linear-gradient(top, rgba(238,238,238,1) 0%, rgba(238,238,238,1) 37%, rgba(204,204,204,1) 100%)
+    background: linear-gradient(to bottom, rgba(238,238,238,1) 0%,rgba(238,238,238,1) 37%,rgba(204,204,204,1) 100%)
+
+
+.b-aside-main
+  +span(9 of 9 nest)
+
+.aside-main__img
+  +span(3 of 9)
+  @media (max-width: 490px)
+    +span(9 of 9)
+
+.aside-main__title
+  +font(17px, 1.255, #111)
+  @media (max-width: 490px)
+    text-align: center
+
+.aside-main__text
+  +font(13px, 19px, #111)
+  margin-top: 20px
+
+.b-last-aside
+  +span(9 of 9 nest)
+
+.group-last-aside
+  +span(5 of 9)
+  @media (max-width: 490px)
+    +span(9 of 9)
+
+.last-aside__title
+  @media (max-width: 490px)
+    text-align: center
+
+.last-aside__text
+  +font(13px, 19px, #111)
+  margin-top: 20px
+  @media (max-width: 490px)
+    +span(9 of 9)
+
+.last-aside__img
+  +span(4 at 6 of 9)
+  @media (max-width: 490px)
+    +span(9 of 9)
+
+/* footer */
+
+.b-footer
+  +container()
+
+.b-main-footer
+  +span(12 of 12)
+  box-sizing: border-box
+  margin-top: 40px
+  margin-bottom: 40px
+  height: 300px
+  background-color: rgba(55, 55, 55, .1)
+  border: 2px solid rgb(55, 55, 55)

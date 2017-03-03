@@ -1,0 +1,17 @@
+/* Global settings */
+$susy: (
+        columns: 12,                  // number of columns
+        gutters: .35,                 // gap 1/4 from (width 1 column)
+        output: float,                // adaptive site
+        flow: ltr,                    // way to the right
+        gutter-position: split,       // padding right (could be: before or inside)
+        container: 1024px,            // width general container
+        global-box-sizing: border-box,
+        debug: (
+     image: hide,                     // show columns
+     color: rgba(#66f, .25),          // color of columns
+     output: overlay,                 // method
+     toggle: top right,               // where show button
+   ),
+);
+

@@ -1,0 +1,56 @@
+// grid
+
+.b-wrapper
+  padding: 0 0 0 0
+  min-width: 320px
+  width: 100%
+  position: relative
+  overflow: hidden
+  min-height: 100%
+
+.b-container
+  width: 1200px
+  box-sizing: border-box
+  margin: 0 auto
+  position: relative
+  padding-left: 20px
+  padding-right: 20px
+  @media screen and (min-width: 1000px) and (max-width: 1199px)
+    width: 1000px
+  @media screen and (min-width: 600px) and (max-width: 999px)
+    width: 600px
+  @media screen and (max-width: 599px)
+    width: 320px
+
+// variables
+
+
+// mixins
+
+@mixin clearFloat
+  display: inline-block
+  &:after
+    content: " "
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+  * html &
+    height: 1px
+
+@mixin font($font-s, $font-h, $font-c)
+  font-size: $font-s
+  line-height: $font-h
+  color: $font-c
+
+@mixin hover($hover-b, $hover-c)
+  background: $hover-b
+  color: $hover-c
+  transition: .3s
+
+@mixin fonts($fontFamily, $font-s, $font-h, $font-w, $font-c)
+  font-family: $fontFamily
+  font-size: $font-s
+  line-height: $font-h
+  font-weight: $font-w
+  color: $font-c
